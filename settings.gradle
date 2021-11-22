@@ -1,0 +1,28 @@
+
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral { 
+            credentials { 
+                username properties['nexusUser']//"${nexusUser}" 
+                password properties['nexusPassword']}//"${nexusPassword}" } 
+            url properties['nexusUrl'] //= nexusGradlePluginPortalRepoUrl 
+        } 
+        gradlePluginPortal()
+    }
+    plugins {
+      id 'io.quarkus' version "2.4.2.Final"
+    }
+}
+
+
+
+plugins {
+    id "com.gradle.enterprise" version "3.7.1"
+}
+
+rootProject.name='quarkus-example'
+
+
+
+
